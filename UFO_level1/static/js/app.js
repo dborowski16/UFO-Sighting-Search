@@ -68,29 +68,28 @@ var tbody = d3.select("tbody");
 //   });
 // });
 
-// Use d3 to append 1 cell per weather report value (weekday, date, high, low)
-data.forEach(function(ufoSiting) {
-  console.log(ufoSiting);
-  var row = tbody.append("tr");
-
-  Object.entries(ufoSiting).forEach(function([key, value]) {
-    console.log(key, value);
-    // Append a cell to the row for each value
-    // in the weather report object
-    var cell = row.append("td");
-  });
-});
-
-// // Step 5: Use d3 to update each cell's text with
-// // weather report values (weekday, date, high, low)
+// Use d3 to append 1 cell per siting
 // data.forEach(function(ufoSiting) {
 //   console.log(ufoSiting);
 //   var row = tbody.append("tr");
+
 //   Object.entries(ufoSiting).forEach(function([key, value]) {
 //     console.log(key, value);
 //     // Append a cell to the row for each value
 //     // in the weather report object
 //     var cell = row.append("td");
-//     cell.text(value);
 //   });
 // });
+
+// Use d3 to update each cell's text with siting data
+tableData.forEach(function(ufoSiting) {
+  console.log(ufoSiting);
+  var row = tbody.append("tr");
+  Object.entries(ufoSiting).forEach(function([key, value]) {
+    console.log(key, value);
+    // Append a cell to the row for each value
+    // in the weather report object
+    var cell = row.append("td");
+    cell.text(value);
+  });
+});
