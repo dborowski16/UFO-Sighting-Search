@@ -17,7 +17,8 @@ tableData.forEach((ufoSiting) => {
 var button = d3.select("#filter-btn");
 
 // Getting a reference to the input element on the page with the id property set to 'datetime'
-var inputField = d3.select("#datetime");
+// var inputDate = d3.select("#datetime");
+// var inputCity = d3.select("#city");
 
 // Select the form
 var form = d3.select("#form");
@@ -33,13 +34,17 @@ function runEnter() {
   d3.event.preventDefault();
   
   // Select the input element and get the raw HTML node
-  var inputDate = d3.select("#datetime");
+  var inputElement = d3.select("#input");
 
   // Get the value property of the input element
-  var inputValue = inputDate.property("value");
-
+  var inputValue = inputElement.property("value");
+ 
   // Filtering the data by the user input
-  var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
+  var filteredData = tableData.filter(tableData => tableData.datetime === inputValue || 
+                                                    tableData.city === inputValue ||
+                                                    tableData.state === inputValue ||
+                                                    tableData.country === inputValue ||
+                                                    tableData.shape === inputValue);
 
   console.log(filteredData);
 
