@@ -101,3 +101,25 @@ tableData.forEach((ufoSiting) => {
       cell.text(value);
     });
   });
+
+// Getting a reference to the button on the page with the id property set to `filter-btn`
+var button = d3.select("#filter-btn");
+
+// Getting a reference to the input element on the page with the id property set to 'datetime'
+var inputField = d3.select("#datetime");
+
+// This function is triggered when the button is clicked
+function handleClick() {
+  console.log("A button was clicked!");
+
+  // We can use d3 to see the object that dispatched the event
+  console.log(d3.event.target);
+}
+
+button.on("click", handleClick);
+
+// You can also define the click handler inline
+button.on("click", function() {
+  console.log("Hi, a button was clicked!");
+  console.log(d3.event.target);
+});
