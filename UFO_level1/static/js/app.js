@@ -82,14 +82,22 @@ var tbody = d3.select("tbody");
 // });
 
 // Use d3 to update each cell's text with siting data
-tableData.forEach(function(ufoSiting) {
-  console.log(ufoSiting);
-  var row = tbody.append("tr");
-  Object.entries(ufoSiting).forEach(function([key, value]) {
-    console.log(key, value);
-    // Append a cell to the row for each value
-    // in the weather report object
-    var cell = row.append("td");
-    cell.text(value);
+// tableData.forEach(function(ufoSiting) {
+//   console.log(ufoSiting);
+//   var row = tbody.append("tr");
+//   Object.entries(ufoSiting).forEach(function([key, value]) {
+//     console.log(key, value);
+//     // Append a cell to the row for each value
+//     // in the weather report object
+//     var cell = row.append("td");
+//     cell.text(value);
+//   });
+// });
+
+tableData.forEach((ufoSiting) => {
+    var row = tbody.append("tr");
+    Object.entries(ufoSiting).forEach(([key, value]) => {
+      var cell = row.append("td");
+      cell.text(value);
+    });
   });
-});
