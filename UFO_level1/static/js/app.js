@@ -144,8 +144,9 @@ function runEnter() {
   var inputValue = inputDate.property("value");
 
   console.log(inputValue);
+  console.log(tableData);
+
+  var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
+
+  console.log(filteredData);
 }
-
-//   var filteredData = people.filter(person => person.bloodType === inputValue);
-
-//   console.log(filteredData);
