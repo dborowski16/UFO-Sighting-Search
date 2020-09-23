@@ -59,34 +59,34 @@ var tbody = d3.select("tbody");
 // });
 
 // Use `Object.entries` to console.log each weather report value
-// data.forEach(function(weatherReport) {
-//   console.log(weatherReport);
+// tableData.forEach(function(ufoSiting) {
+//   console.log(ufoSiting);
 //   var row = tbody.append("tr");
 
-//   Object.entries(weatherReport).forEach(function([key, value]) {
+//   Object.entries(ufoSiting).forEach(function([key, value]) {
 //     console.log(key, value);
 //   });
 // });
 
-// // Step 4: Use d3 to append 1 cell per weather report value (weekday, date, high, low)
-// data.forEach(function(weatherReport) {
-//   console.log(weatherReport);
-//   var row = tbody.append("tr");
+// Use d3 to append 1 cell per weather report value (weekday, date, high, low)
+data.forEach(function(ufoSiting) {
+  console.log(ufoSiting);
+  var row = tbody.append("tr");
 
-//   Object.entries(weatherReport).forEach(function([key, value]) {
-//     console.log(key, value);
-//     // Append a cell to the row for each value
-//     // in the weather report object
-//     var cell = row.append("td");
-//   });
-// });
+  Object.entries(ufoSiting).forEach(function([key, value]) {
+    console.log(key, value);
+    // Append a cell to the row for each value
+    // in the weather report object
+    var cell = row.append("td");
+  });
+});
 
 // // Step 5: Use d3 to update each cell's text with
 // // weather report values (weekday, date, high, low)
-// data.forEach(function(weatherReport) {
-//   console.log(weatherReport);
+// data.forEach(function(ufoSiting) {
+//   console.log(ufoSiting);
 //   var row = tbody.append("tr");
-//   Object.entries(weatherReport).forEach(function([key, value]) {
+//   Object.entries(ufoSiting).forEach(function([key, value]) {
 //     console.log(key, value);
 //     // Append a cell to the row for each value
 //     // in the weather report object
