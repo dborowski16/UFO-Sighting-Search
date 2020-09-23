@@ -43,15 +43,6 @@ function runEnter() {
 
   console.log(filteredData);
 
-//   var tbody = d3.select("tbody");
-
-//     // Iterating through each dictionary in the array, creating and appending to a new row for each element
-//     filteredData.forEach((ufoSiting) => {
-//         var row = tbody.append("tr");
-//         Object.entries(ufoSiting).forEach(([key, value]) => {
-//         var cell = row.append("td");
-//         cell.text(value);
-//         });
-//     });
+  tbody.selectAll()
 
 }
