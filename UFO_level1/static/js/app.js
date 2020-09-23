@@ -109,17 +109,43 @@ var button = d3.select("#filter-btn");
 var inputField = d3.select("#datetime");
 
 // This function is triggered when the button is clicked
-function handleClick() {
-  console.log("A button was clicked!");
+// function handleClick() {
+//   console.log("A button was clicked!");
 
-  // We can use d3 to see the object that dispatched the event
-  console.log(d3.event.target);
-}
+//   // We can use d3 to see the object that dispatched the event
+//   console.log(d3.event.target);
+// }
 
-button.on("click", handleClick);
+// button.on("click", handleClick);
 
 // You can also define the click handler inline
 button.on("click", function() {
   console.log("Hi, a button was clicked!");
   console.log(d3.event.target);
 });
+
+// Select the form
+var form = d3.select("#form");
+
+// Create event handlers 
+button.on("click", runEnter);
+form.on("submit",runEnter);
+
+// Complete the event handler function for the form
+function runEnter() {
+
+  // Prevent the page from refreshing
+  d3.event.preventDefault();
+  
+  // Select the input element and get the raw HTML node
+  var inputDate = d3.select("#datetime");
+
+  // Get the value property of the input element
+  var inputValue = inputDate.property("value");
+
+  console.log(inputValue);
+}
+
+//   var filteredData = people.filter(person => person.bloodType === inputValue);
+
+//   console.log(filteredData);
