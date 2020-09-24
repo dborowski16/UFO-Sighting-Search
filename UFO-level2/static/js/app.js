@@ -16,10 +16,6 @@ tableData.forEach((ufoSiting) => {
 // Getting a reference to the button on the page with the id property set to `filter-btn`
 var button = d3.select("#filter-btn");
 
-// Getting a reference to the input element on the page with the id property set to 'datetime'
-// var inputDate = d3.select("#datetime");
-// var inputCity = d3.select("#city");
-
 // Select the form
 var form = d3.select("#form");
 
@@ -40,12 +36,47 @@ function runEnter() {
   var inputValue = inputElement.property("value");
  
   // Filtering the data by the user input
-  var filteredData = tableData.filter(tableData => tableData.datetime === inputValue || 
-                                                    tableData.city === inputValue ||
-                                                    tableData.state === inputValue ||
-                                                    tableData.country === inputValue ||
-                                                    tableData.shape === inputValue);
-
+  var filteredData = tableData.filter(tableData => 
+    tableData.datetime === inputValue || 
+    tableData.city === inputValue ||
+    tableData.state === inputValue ||
+    tableData.country === inputValue ||
+    tableData.shape === inputValue);
+  
   console.log(filteredData);
 
+  tbody.html("");
+
+  filteredData.forEach((ufoSighting) => {
+    var row = tbody.append("tr");
+    Object.entries(ufoSighting).forEach(([key, value]) => {
+      var cell = row.append("td");
+      cell.text(value);
+    });
+  });
 }
+
+// Select reset button
+var button = d3.select("#reset-btn");
+
+// Select the form
+var form = d3.select("#form");
+
+// Create event handlers 
+button.on("click", runReset);
+form.on("submit",runReset);
+
+function runReset() {
+  // Get a reference to the table body
+  var tbody = d3.select("tbody");
+
+  // Iterating through each dictionary in the array, creating and appending to a new row for each element
+  tableData.forEach((ufoSiting) => {
+      var row = tbody.append("tr");
+      Object.entries(ufoSiting).forEach(([key, value]) => {
+        var cell = row.append("td");
+        cell.text(value);
+      });
+    });
+}
+
