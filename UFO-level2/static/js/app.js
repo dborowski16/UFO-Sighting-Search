@@ -5,9 +5,9 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 // Iterating through each dictionary in the array, creating and appending to a new row for each element
-tableData.forEach((ufoSiting) => {
+tableData.forEach((ufoSighting) => {
     var row = tbody.append("tr");
-    Object.entries(ufoSiting).forEach(([key, value]) => {
+    Object.entries(ufoSighting).forEach(([key, value]) => {
       var cell = row.append("td");
       cell.text(value);
     });
@@ -71,9 +71,9 @@ function runReset() {
   var tbody = d3.select("tbody");
 
   // Iterating through each dictionary in the array, creating and appending to a new row for each element
-  tableData.forEach((ufoSiting) => {
+  tableData.forEach((ufoSighting) => {
       var row = tbody.append("tr");
-      Object.entries(ufoSiting).forEach(([key, value]) => {
+      Object.entries(ufoSighting).forEach(([key, value]) => {
         var cell = row.append("td");
         cell.text(value);
       });

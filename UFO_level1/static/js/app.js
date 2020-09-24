@@ -5,9 +5,9 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 // Iterating through each dictionary in the array, creating and appending to a new row for each element
-tableData.forEach((ufoSiting) => {
+tableData.forEach((ufoSighting) => {
     var row = tbody.append("tr");
-    Object.entries(ufoSiting).forEach(([key, value]) => {
+    Object.entries(ufoSighting).forEach(([key, value]) => {
       var cell = row.append("td");
       cell.text(value);
     });
@@ -43,4 +43,37 @@ function runEnter() {
 
   console.log(filteredData);
 
+  tbody.html("");
+
+  filteredData.forEach((ufoSighting) => {
+    var row = tbody.append("tr");
+    Object.entries(ufoSighting).forEach(([key, value]) => {
+      var cell = row.append("td");
+      cell.text(value);
+    });
+  });
+}
+
+// Select reset button
+var button = d3.select("#reset-btn");
+
+// Select the form
+var form = d3.select("#form");
+
+// Create event handlers 
+button.on("click", runReset);
+form.on("submit",runReset);
+
+function runReset() {
+  // Get a reference to the table body
+  var tbody = d3.select("tbody");
+
+  // Iterating through each dictionary in the array, creating and appending to a new row for each element
+  tableData.forEach((ufoSighting) => {
+      var row = tbody.append("tr");
+      Object.entries(ufoSighting).forEach(([key, value]) => {
+        var cell = row.append("td");
+        cell.text(value);
+      });
+    });
 }
