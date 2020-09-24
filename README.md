@@ -9,5 +9,5 @@ Part 1 of the code was to create the dynamic table for display on the main page.
 
 Part 2 of the code was to further the development of the table filter so that a filter of the data can be applied accross multiple columns instead of just the date.  This is acheived through a dropdown menu for selection.  And again, the reset filter button was added in to return to the base table.
 
-![UFO Sightings](https://github.com/dborowski16/javascript-challenge/blob/master/UFO_level2/static/images/level2_1.png)
-![UFO Sightings](https://github.com/dborowski16/javascript-challenge/blob/master/UFO_level2/static/images/level2_2.png)
+![UFO Sightings](https://github.com/dborowski16/javascript-challenge/blob/master/UFO-level2/static/images/level2_1.png)
+![UFO Sightings](https://github.com/dborowski16/javascript-challenge/blob/master/UFO-level2/static/images/level2_2.png)
