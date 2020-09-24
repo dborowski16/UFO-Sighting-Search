@@ -1,4 +1,4 @@
-# javascript-challenge
+# UFO-Sighting-Search
 ![UFO Sightings](https://github.com/dborowski16/javascript-challenge/blob/master/UFO_level1/static/images/level1_1.png)
 
 Welcome to the best source for UFO sightings in the world.  When sightings of UFO's have been made, their date, location, and shape, as well as some comments of the appearance are made.  For the curious, the purpose of creating this website was to provide a source for this information, as well as to allow users to be able to search through the data based upon the criteria contained within.  The code is created to be dynamic for any data source that contains the following columns: date/time, city, state, country, duration, shape, and any additional comments.  The nice part about the code is that it creates a dynamic table that can ultimately be sorted by all of the variables, making drilling down throught the information, especially large data sets, a breeze.  The development of the code is done through javascript, html, and css and was developed in two parts.
